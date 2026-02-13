@@ -29,18 +29,7 @@ All limits are adjustable per-call. Paginated tools return metadata like `"Showi
 - Directory tree with depth control
 - Dynamic directory access via [MCP Roots](https://modelcontextprotocol.io/docs/learn/client-concepts#roots)
 
-## Setup
-
-```bash
-npm install
-npm run build
-```
-
 ## Usage
-
-```bash
-node dist/index.js /path/to/allowed/dir1 /path/to/allowed/dir2
-```
 
 ### Claude Desktop
 
@@ -50,9 +39,10 @@ Add to your `claude_desktop_config.json`:
 {
   "mcpServers": {
     "filesystem": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "/path/to/filesystem-mcp/dist/index.js",
+        "-y",
+        "github:abdielou/filesystem-mcp",
         "/Users/username/Documents",
         "/path/to/other/allowed/dir"
       ]
@@ -69,9 +59,10 @@ Add to `.vscode/mcp.json` or your user MCP configuration:
 {
   "servers": {
     "filesystem": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "/path/to/filesystem-mcp/dist/index.js",
+        "-y",
+        "github:abdielou/filesystem-mcp",
         "${workspaceFolder}"
       ]
     }
