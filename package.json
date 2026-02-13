@@ -1,15 +1,14 @@
 {
-  "name": "@modelcontextprotocol/server-filesystem",
-  "version": "0.6.3",
-  "description": "MCP server for filesystem access",
-  "license": "SEE LICENSE IN LICENSE",
-  "mcpName": "io.github.modelcontextprotocol/server-filesystem",
-  "author": "Model Context Protocol a Series of LF Projects, LLC.",
-  "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/modelcontextprotocol/servers/issues",
+  "name": "filesystem-mcp",
+  "version": "0.7.0",
+  "description": "Context-safe MCP filesystem server with pagination",
+  "license": "MIT",
+  "author": "abdielou",
+  "homepage": "https://github.com/abdielou/filesystem-mcp",
+  "bugs": "https://github.com/abdielou/filesystem-mcp/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/modelcontextprotocol/servers.git"
+    "url": "https://github.com/abdielou/filesystem-mcp.git"
   },
   "type": "module",
   "bin": {
@@ -20,7 +19,6 @@
   ],
   "scripts": {
     "build": "tsc && shx chmod +x dist/*.js",
-    "prepare": "npm run build",
     "watch": "tsc --watch",
     "test": "vitest run --coverage"
   },
